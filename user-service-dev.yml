@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms
+    username: ${POSTGRES_USER:victor}
+    password: ${POSTGRES_PASSWORD:password}
