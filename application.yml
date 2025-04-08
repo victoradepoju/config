@@ -1,0 +1,4 @@
+application:
+  description: Microservices Application
+  license: API Licence
+  version: 1.0
