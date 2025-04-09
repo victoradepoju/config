@@ -2,3 +2,10 @@ application:
   description: Microservices Application
   license: API Licence
   version: 1.0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8002/eureka/
+    fetch-registry: true
+    register-with-eureka: true
