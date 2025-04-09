@@ -8,3 +8,16 @@ spring:
     url: jdbc:postgresql://localhost:5432/ms
     username: ${POSTGRES_USER:victor}
     password: ${POSTGRES_PASSWORD:password}
+
+  cloud:
+    gcp:
+      project-id: trusty-fuze-456211-j9
+      storage:
+        bucket-name: ms-filestorage-test
+        credentials:
+          location: file:trusty-fuze-456211-j9-c9a4dbbef9e1.json
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
