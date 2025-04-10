@@ -15,7 +15,7 @@ spring:
       storage:
         bucket-name: ms-filestorage-test
         credentials:
-          location: file:trusty-fuze-456211-j9-c9a4dbbef9e1.json
+          location: file:./trusty-fuze-456211-j9-c9a4dbbef9e1.json
 
   servlet:
     multipart:
