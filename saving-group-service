@@ -1,5 +1,39 @@
-
+server:
+  port: 8008
 
 spring:
   config:
     import: configserver:http://localhost:8001/
+  datasource:
+    url: jdbc:h2:mem:savinggroupdb
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+logging:
+  level:
+    org.hibernate.SQL: OFF
+    org.hibernate.type.descriptor.sql.BasicBinder: OFF
+
+wallet:
+  service:
+    url: http://localhost:8007 # Default to wallet-service port
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
