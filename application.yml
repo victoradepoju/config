@@ -9,3 +9,7 @@ eureka:
       defaultZone: http://localhost:8002/eureka/
     fetch-registry: true
     register-with-eureka: true
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
